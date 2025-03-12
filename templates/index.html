@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionForge AI - Cognitive Image Synthesis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>VisionForge AI</h1>
+            <p class="subtitle">Crafted by Abhishek Chourasia</p>
+            <p class="motto">Text to Image Generator using Stability.ai API</p>
+        </header>
+
+        <main>
+            <div class="generator-card">
+                <textarea id="promptInput" placeholder="Describe the image you want to generate..."></textarea>
+                <center><button id="generateBtn">Generate Image</button></center>
+            </div>
+
+            <div id="historyContainer">
+                <h3>Previous Prompt:</h3>
+                <p id="previousPrompt">{{ previous_prompt if previous_prompt else "No previous prompt available" }}</p>
+            </div>
+
+            <div id="resultContainer" class="hidden">
+                <div class="image-container">
+                    <img id="generatedImage" src="" alt="Generated Image">
+                </div>
+                <div class="actions">
+                    <button id="downloadBtn">Download Image</button>
+                </div>
+            </div>
+
+            <div id="loading" class="hidden">
+                <div class="loader"></div>
+                <p>Generating your image...</p>
+            </div>
+
+            <div id="errorContainer" class="hidden"></div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

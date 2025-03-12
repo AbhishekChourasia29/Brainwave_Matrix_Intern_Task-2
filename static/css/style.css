@@ -1,0 +1,178 @@
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --background: #f8fafc;
+  --text: #1e293b;
+  --border: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.generator-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+#resultContainer {
+  margin-top: 2rem;
+}
+
+.image-container {
+  display: flex; 
+  justify-content: center; /* Horizontally centers the image */
+  align-items: center; /* Vertically centers the image (if necessary) */
+  width: 100%;
+  padding: 1rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#generatedImage {
+  max-width: 100%;
+  max-height: 500px; /* Prevents overly large images */
+  border-radius: 0.5rem;
+  display: block;
+}
+
+
+.actions {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#loading {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+/* Add these styles */
+#historyContainer {
+  margin-top: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.history-entry {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.history-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+#toggleHistoryBtn {
+  margin-top: 1rem;
+  background: var(--primary);
+  color: white;
+}
+
+#toggleHistoryBtn:hover {
+  background: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+  .container {
+      margin: 1rem;
+      padding: 0 0.5rem;
+  }
+  
+  .history-entry {
+      grid-template-columns: 1fr;
+  }
+  
+  .generator-card {
+      padding: 1rem;
+  }
+}
