@@ -1,4 +1,8 @@
+# Barinwave Matrix Internship AI/ML Intern Task -2 by Abhishek Chourasia
+
 # VisionForge AI - Project Report
+
+# Text to Image Generator Application
 
 ## 1. Project Overview
 Cognitive image synthesis platform enabling text-to-image generation using Stability.ai's API with history tracking and responsive UI.
@@ -30,3 +34,13 @@ Cognitive image synthesis platform enabling text-to-image generation using Stabi
 4. Access `http://localhost:5000`
 
 ## 5. System Architecture
+
+## 6. Future Enhancements
+- User authentication system
+- Batch generation capabilities
+- Style presets selector
+- Cloud deployment with Docker
+
+## 7. References
+- Stability API Documentation: https://platform.stability.ai
+- Flask Framework: https://flask.palletsprojects.com
